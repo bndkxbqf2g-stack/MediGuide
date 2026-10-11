@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#102a43" />
+    <meta name="description" content="Private mobile Medikamentensuche von MediGuide" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>MediGuide · Medikamentensuche</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <p class="eyebrow">MediGuide · privater Stationsassistent</p>
+        <h1>Medikamentensuche</h1>
+        <p class="intro">Schneller Zugriff auf die historische UKW-Arbeitsgrundlage.</p>
+      </header>
+
+      <main>
+        <section class="status-card" aria-label="Datenstatus">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>Historische Referenz · nicht klinisch freigegeben</strong>
+            <p>Aktuelle Fachinformation, lokale Vorgabe und zweite Kontrolle bleiben erforderlich.</p>
+          </div>
+          <span class="version-badge" id="dataset-version">Daten werden geladen</span>
+        </section>
+
+        <section class="search-section" aria-labelledby="search-title">
+          <h2 id="search-title">Wirkstoff oder Handelsname</h2>
+          <form id="search-form" role="search">
+            <div class="search-row">
+              <label class="sr-only" for="search-input">Wirkstoff, Handelsname, Stärke oder Kategorie suchen</label>
+              <input
+                id="search-input"
+                type="search"
+                inputmode="search"
+                autocomplete="off"
+                placeholder="z. B. Cisplatin oder AmBisome"
+              />
+              <button id="clear-search" class="clear-button" type="button" aria-label="Suche löschen" hidden>×</button>
+            </div>
+          </form>
+          <p class="search-meta" id="search-meta">Daten werden geladen …</p>
+        </section>
+
+        <section aria-labelledby="results-title">
+          <div class="section-heading">
+            <h2 id="results-title">Treffer</h2>
+            <span class="result-count" id="result-count"></span>
+          </div>
+          <div id="results" class="results" aria-live="polite"></div>
+        </section>
+
+        <section id="details" class="details-card" aria-labelledby="details-title" hidden>
+          <div class="section-heading details-heading">
+            <div>
+              <p class="eyebrow">Ausgewählter Eintrag</p>
+              <h2 id="details-title">Medikament</h2>
+              <p class="details-trade" id="details-trade"></p>
+            </div>
+            <button id="close-details" class="text-button" type="button">Schließen</button>
+          </div>
+
+          <div class="detail-alert">
+            <strong id="details-status">UNGEPRÜFT_HISTORISCH</strong>
+            <span>Historische Quelle. Nicht als aktuellen Standard verwenden.</span>
+          </div>
+
+          <div class="detail-grid">
+            <div class="detail-group detail-group-wide">
+              <h3>Zubereitung</h3>
+              <dl>
+                <div><dt>Stärke / Form</dt><dd id="details-strength"></dd></div>
+                <div><dt>Zubereitung laut Quelle</dt><dd id="details-preparation"></dd></div>
+                <div><dt>Konzentration laut Quelle</dt><dd id="details-concentration"></dd></div>
+                <div><dt>Infusionszeit / Rate</dt><dd id="details-infusion"></dd></div>
+              </dl>
+            </div>
+
+            <div class="detail-group">
+              <h3>Sicherheit und Status</h3>
+              <dl>
+                <div><dt>Stabilität</dt><dd id="details-stability"></dd></div>
+                <div><dt>Warnhinweis / Kommentar</dt><dd id="details-warning"></dd></div>
+                <div><dt>Kategorie</dt><dd id="details-category"></dd></div>
+              </dl>
+            </div>
+
+            <div class="detail-group">
+              <h3>Quelle</h3>
+              <dl>
+                <div><dt>Quellenstand</dt><dd id="details-source-version"></dd></div>
+                <div><dt>Quellseite</dt><dd id="details-source-page"></dd></div>
+                <div><dt>Datenversion</dt><dd id="details-data-version"></dd></div>
+              </dl>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <span>App-Version <strong id="app-version">0.1.0</strong></span>
+        <span>Daten <strong id="footer-data-version">0.1.0-historisch</strong></span>
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
