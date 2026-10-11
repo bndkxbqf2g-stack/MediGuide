@@ -27,6 +27,16 @@ jobs:
           test -f MEDICATION_SAFETY_RULES.md
           test -f MODULES.md
           test -f CHANGELOG.md
+          test -f IMPORT_HISTORICAL_DATA.md
+          test -f tools/import_historical_medications.py
+          test -f tools/validate_historical_data.mjs
+          test -f data/medications-historical.v0.1.0.json
+
+      - name: Validate normalized historical dataset
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/validate_historical_data.mjs data/medications-historical.v0.1.0.json
 
       - name: Reject obvious local-source artifacts
         shell: bash
