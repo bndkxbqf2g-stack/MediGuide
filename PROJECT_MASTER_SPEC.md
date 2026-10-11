@@ -155,6 +155,14 @@ Im MVP wird der ZIP-Bestand nicht pauschal als gültiger Chemotherapie-Katalog i
 
 Die technische Umsetzung startet erst auf Basis dieses Dokuments. Rechnermodule, KI-Chat, Cloud, Login und Chemotherapie-Entscheidungsunterstützung bleiben außerhalb des MVP.
 
-## 10. Nächster konkreter Arbeitsschritt
+## 10. Umsetzungsstand
 
-Als Nächstes wird aus der UKW-Starttabelle ein normalisiertes, prüfbares Datenmodell erstellt. Dabei werden keine neuen medizinischen Werte ergänzt. Jeder Eintrag bleibt zunächst historisch und ungeprüft, bis eine separate Quelle und eine fachliche Prüfung dokumentiert sind.
+- Das normalisierte Datenmodell enthält 51 historische Einträge.
+- Die erste mobile Suchansicht ist als dependency-freie Offline-PWA-Struktur umgesetzt.
+- Suche und Treffer beschränken sich auf dokumentierte Identifikationsfelder.
+- Jede Detailansicht zeigt Prüfstatus, Quellenstand und Datenversion.
+- Der lokale Offline-Fallback verwendet ausschließlich die zuvor geladene versionierte Datenbasis.
+
+## 11. Nächster konkreter Arbeitsschritt
+
+Als Nächstes werden Medikamentenkarte und Quellenansicht weiter verfeinert. Favoriten und Verlauf folgen erst danach. Rechner, KI-Chat, Cloud, Login und Chemotherapie-Entscheidungsunterstützung bleiben außerhalb dieses MVP-Schritts.

@@ -31,12 +31,28 @@ jobs:
           test -f tools/import_historical_medications.py
           test -f tools/validate_historical_data.mjs
           test -f data/medications-historical.v0.1.0.json
+          test -f app/index.html
+          test -f app/app.js
+          test -f app/search.js
+          test -f app/search.test.mjs
+          test -f app/styles.css
+          test -f app/manifest.webmanifest
+          test -f service-worker.js
 
       - name: Validate normalized historical dataset
         shell: bash
         run: |
           set -euo pipefail
           node tools/validate_historical_data.mjs data/medications-historical.v0.1.0.json
+
+      - name: Run mobile search tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check app/app.js
+          node --check app/search.js
+          node --check service-worker.js
+          node --test app/search.test.mjs
 
       - name: Reject obvious local-source artifacts
         shell: bash

@@ -12,6 +12,8 @@
 - Initiale CI-Grundlage.
 - Read-only-Importer für die historische UKW-Medikamententabelle.
 - Normalisierte historische Datenbasis mit automatischer Strukturprüfung.
+- Erste mobile Suchansicht mit Detailansicht, Quellenstand und Offline-Fallback.
+- Sichtbare App-Version `0.1.0` und Daten-Version `0.1.0-historisch` in der Oberfläche.
 
 ### Data baseline
 
