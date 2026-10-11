@@ -10,6 +10,8 @@
 - Medikamenten-Datenmodell und Prüfstatus.
 - Modulübersicht.
 - Initiale CI-Grundlage.
+- Read-only-Importer für die historische UKW-Medikamententabelle.
+- Normalisierte historische Datenbasis mit automatischer Strukturprüfung.
 
 ### Data baseline
 
@@ -17,3 +19,4 @@
 - Startbestand: 51 historische, ungeprüfte Medikamenteneinträge.
 - Keine klinische Freigabe.
 - Keine patientenbezogenen Originaldateien im Repository.
+- Keine medizinischen Werte werden beim Import berechnet oder ergänzt.
