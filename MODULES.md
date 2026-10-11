@@ -2,7 +2,7 @@
 
 | Modul | MVP | Zweck |
 |---|---:|---|
-| Schnell-Suche | ja | Suche nach Wirkstoff, Handelsname, Synonym und Kategorie |
+| Schnell-Suche | ja | Erste mobile Offline-Suchansicht nach Wirkstoff, Handelsname, Stärke und Kategorie |
 | Medikamentenkarten | ja | Zubereitung, Lösungsmittel, Konzentration, Infusionsangabe, Stabilität, Warnungen |
 | Quellenansicht | ja | Rückverfolgung zu Originaldatei und Seitenangabe |
 | Prüfstatus | ja | Historisch, ungeprüft, widersprüchlich, gesperrt und offen sichtbar |
