@@ -6,7 +6,7 @@ Privater persönlicher digitaler Stationsassistent für den Stationsalltag mit S
 
 - App-Version: `0.1.0`
 - Daten-Version: `0.1.0-historisch`
-- Projektphase: Repository-Grundlage und Wissensmodell
+- Projektphase: erste mobile Suchansicht auf historischer Datenbasis
 - Zielplattform des MVP: private, mobiloptimierte Offline-PWA
 
 ## Verbindliche Grenzen
@@ -31,3 +31,4 @@ Jeder medizinische Wert benötigt eine konkrete Quelle, einen Quellenstand und e
 - [MEDICATION_SAFETY_RULES.md](MEDICATION_SAFETY_RULES.md)
 - [MODULES.md](MODULES.md)
 - [CHANGELOG.md](CHANGELOG.md)
+- [Mobile Suchansicht](app/index.html)
