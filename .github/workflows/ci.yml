@@ -1,0 +1,38 @@
+name: Repository guardrails
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required project files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f README.md
+          test -f AGENTS.md
+          test -f PROJECT_MASTER_SPEC.md
+          test -f MEDICATION_DATA_SCHEMA.md
+          test -f MEDICATION_SAFETY_RULES.md
+          test -f MODULES.md
+          test -f CHANGELOG.md
+
+      - name: Reject obvious local-source artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          if find . -type f \( -name '*.pdf' -o -name '*.doc' -o -name '*.docx' -o -name '*.xlsx' -o -name '*.zip' \) -not -path './.git/*' | grep -q .; then
+            echo "Raw source artifacts must not be committed to the initial repository."
+            exit 1
+          fi
