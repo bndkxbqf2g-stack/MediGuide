@@ -1,0 +1,25 @@
+# Local development
+node_modules/
+dist/
+build/
+coverage/
+.env
+.env.*
+!.env.example
+
+# Local source material and exports
+source/
+downloads/
+*.zip
+*.pdf
+*.doc
+*.docx
+*.xlsx
+*.xls
+*.csv
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
