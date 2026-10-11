@@ -1,0 +1,11 @@
+{
+  "name": "MediGuide Medikamentensuche",
+  "short_name": "MediGuide",
+  "lang": "de-DE",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#102a43",
+  "description": "Private mobile Medikamentensuche mit historisch gekennzeichneter UKW-Arbeitsgrundlage."
+}
